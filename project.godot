@@ -1,0 +1,26 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Energy-B"
+config/description="Energy-B 能量币 - 第一关测试版"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+EnergySystem="*res://scripts/systems/EnergySystem.gd"
+QuestSystem="*res://scripts/systems/QuestSystem.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="mobile"
