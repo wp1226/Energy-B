@@ -63,10 +63,10 @@
 
 ### 七、许可证
 
-`请在此填写所选许可证,例如 MIT / GPL-3.0 / 自定义`
+本项目代码采用 **GPL-3.0** 许可证。
 
 > 无论采用何种许可证,**"Energy-B"、"能量币"、"易币"的名称、世界观及核心设定,版权归原作者所有**。
-
+The code of this project is licensed under **GPL-3.0**.
 ---
 
 <a id="english"></a>
