@@ -123,11 +123,11 @@ Quick flow:
 
 ### 6. Author & Contact
 
-- Author / Maintainer: `your name or ID`
-- Contact / community: `QQ group / WeChat / Discord / Email`
+- Author / Maintainer:wp1226
+- Contact / community: wp1226@foxmail.com
 
 ### 7. License
 
-`Please fill in your chosen license, e.g. MIT / GPL-3.0 / custom`
+The code of this project is licensed under **GPL-3.0**. See the [LICENSE](LICENSE) file for details.
 
 > Regardless of license, **the names "Energy-B", "能量币" and "易币", as well as the worldview and core design, remain the intellectual property of the original author.**
