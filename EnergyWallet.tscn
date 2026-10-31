@@ -1,0 +1,186 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/EnergyWallet.gd" id="1"]
+
+[node name="EnergyWallet" type="CanvasLayer"]
+layer = 9
+script = ExtResource("1")
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -280.0
+offset_right = 260.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "能量钱包"
+horizontal_alignment = 1
+
+[node name="BtnClose" type="Button" parent="Panel/Margin/VBox/Header"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+text = "X"
+
+[node name="BalanceCard" type="PanelContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="BalVBox" type="VBoxContainer" parent="Panel/Margin/VBox/BalanceCard"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="AvailableLabel" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "可用余额"
+horizontal_alignment = 1
+
+[node name="AvailableValue" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "500.0 EB"
+horizontal_alignment = 1
+
+[node name="SubBalances" type="HBoxContainer" parent="Panel/Margin/VBox/BalanceCard/BalVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SafeBox" type="VBoxContainer" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SafeTitle" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/SafeBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "保险柜"
+horizontal_alignment = 1
+
+[node name="SafeValue" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/SafeBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "0.0 EB"
+horizontal_alignment = 1
+
+[node name="BankBox" type="VBoxContainer" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BankTitle" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/BankBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "银行"
+horizontal_alignment = 1
+
+[node name="BankValue" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/BankBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "0.0 EB"
+horizontal_alignment = 1
+
+[node name="TotalBox" type="VBoxContainer" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TotalTitle" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/TotalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "总计"
+horizontal_alignment = 1
+
+[node name="TotalValue" type="Label" parent="Panel/Margin/VBox/BalanceCard/BalVBox/SubBalances/TotalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "500.0 EB"
+horizontal_alignment = 1
+
+[node name="ActionButtons" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="BtnDepositSafe" type="Button" parent="Panel/Margin/VBox/ActionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "存入保险柜"
+
+[node name="BtnWithdrawSafe" type="Button" parent="Panel/Margin/VBox/ActionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "取出保险柜"
+
+[node name="AmountRow" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AmountEdit" type="LineEdit" parent="Panel/Margin/VBox/AmountRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "金额"
+text = "100"
+alignment = 1
+
+[node name="Quick50" type="Button" parent="Panel/Margin/VBox/AmountRow"]
+layout_mode = 2
+text = "50"
+
+[node name="Quick100" type="Button" parent="Panel/Margin/VBox/AmountRow"]
+layout_mode = 2
+text = "100"
+
+[node name="QuickAll" type="Button" parent="Panel/Margin/VBox/AmountRow"]
+layout_mode = 2
+text = "全部"
+
+[node name="HistoryTitle" type="Label" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "最近交易"
+horizontal_alignment = 1
+
+[node name="HistoryScroll" type="ScrollContainer" parent="Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HistoryList" type="VBoxContainer" parent="Panel/Margin/VBox/HistoryScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="StatusLabel" type="Label" parent="Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = ""
+horizontal_alignment = 1
